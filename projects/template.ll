@@ -12,6 +12,16 @@ define void @print_integer(i32) #0 {
 }
 
 define i32 @main() #0 {
-  ; EMIT CODE FROM YOUR COMPILER HERE
+ %t1 = add nsw i32 2, 3
+  call void @print_integer(i32 %t1)
+  %t2 = sub nsw i32 2, 3
+  call void @print_integer(i32 %t2)
+  %t3 = mul nsw i32 2, 3
+  call void @print_integer(i32 %t3)
+  %t4 = sdiv i32 10, 3
+  call void @print_integer(i32 %t4)
+  %t5 = srem i32 10, 3
+  call void @print_integer(i32 %t5)
+  call void @print_integer(i32 2)
   ret i32 0
 }
